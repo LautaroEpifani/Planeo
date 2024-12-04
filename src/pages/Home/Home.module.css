@@ -1,0 +1,44 @@
+.container {
+  background-image: linear-gradient(
+    to right,
+    #841de4,
+    #a500d3,
+    #cc32c9,
+    #f932b3
+  );
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+
+.formSection {
+  display: flex;
+  gap: 20px;  
+  padding: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContent {
+  width: 50%;
+}
+
+.imageWrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.paragraph {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}

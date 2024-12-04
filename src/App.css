@@ -1,0 +1,55 @@
+/* Normalize CSS Simplificado */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  font-size: 100%; /* Esto es 16px por defecto */
+  line-height: 1.5;
+}
+
+
+body {
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #333;
+  min-height: 100vh;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+input, button, select, textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}

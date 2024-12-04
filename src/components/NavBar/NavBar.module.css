@@ -1,0 +1,21 @@
+.container {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .logoWrapper {
+    flex: 1;
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .logo {
+    width: auto;
+    height: 10vh;
+    border-radius: 10px; 
+    object-fit: cover; 
+  }
