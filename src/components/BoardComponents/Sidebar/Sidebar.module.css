@@ -1,0 +1,49 @@
+@import '../../../css/variables.css';
+
+  
+  .sidebar {
+    width: 250px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .section h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .section li {
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .section li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .tablero {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .tablero p {
+    margin: 0;
+  }
+  

@@ -19,10 +19,8 @@ function ReactHookForm() {
   });
 
   const { errors, isValid } = formState;
-
   function onSubmit(data: LoginData) {
-    login(data);
-    navigate("/");
+    login(data).then(() => navigate("/board"));
     reset();
   }
   

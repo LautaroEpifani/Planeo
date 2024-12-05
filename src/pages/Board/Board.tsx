@@ -1,16 +1,18 @@
-import { useAuth } from '../../hooks/useAuth'
-import styles from './Board.module.css'
+import Navbar from "../../components/BoardComponents/Navbar/Navbar";
+import SecondaryNavbar from "../../components/BoardComponents/SecondaryNavbar/SecondaryNavbar";
+import Sidebar from "../../components/BoardComponents/Sidebar/Sidebar";
+import styles from "./Board.module.css";
 
 const Board = () => {
-
-  const { logout } = useAuth();
-
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>BOARD</h1>
-      <button className={styles.button} onClick={logout}>Logout</button>
+      <Navbar />
+      <div className={styles.content}>
+        <Sidebar/>
+        <SecondaryNavbar/>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Board
+export default Board;

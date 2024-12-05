@@ -1,0 +1,33 @@
+@import '../../../css/variables.css';
+
+.container {
+    background-color: var(--primary-color);
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .logoWrapper {  
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .logo {
+    width: auto;
+    height: 10vh;
+    border-radius: 10px; 
+    object-fit: cover; 
+  }
+
+  .button {
+    background-color: #FFFFFF;
+    font: bold;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}

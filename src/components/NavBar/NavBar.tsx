@@ -1,7 +1,7 @@
 import logo from "../../assets/planeo.png";
-import styles from "./NavBar.module.css";
+import styles from "./Navbar.module.css";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logoWrapper}>
@@ -11,4 +11,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

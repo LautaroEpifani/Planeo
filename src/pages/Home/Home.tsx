@@ -1,9 +1,12 @@
 import styles from "./Home.module.css";
 import team from "../../assets/teams.svg";
 import ReactHookForm from "../../components/ReactHookForm/ReactHookForm";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Home = () => {
   return (
+    <>
+    <Navbar />
     <div className={styles.container}>
       <section className={styles.formSection}>
         <div className={styles.textContent}>
@@ -20,6 +23,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

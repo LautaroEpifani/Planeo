@@ -2,22 +2,34 @@ import { LoginData } from "../types/types";
 import { CustomError } from "../utils/customError"; // Importa el CustomError
 
 // Verificar la sesión del usuario
-export const checkSession = async (): Promise<boolean> => {
+export const checkSession = async (): Promise<{
+  message: string;
+  user: LoginData;
+}> => {
   try {
-    const response = await fetch("http://localhost:3000/users/verify-session", {
+    const response = await fetch("http://localhost:3000/verifySession", {
       method: "GET",
       credentials: "include",
     });
     if (!response.ok) {
-      throw new CustomError("Sesión no válida o expirada", "SESSION_EXPIRED", 401);
+      throw new CustomError(
+        "Sesión no válida o expirada",
+        "SESSION_EXPIRED",
+        401
+      );
     }
-    return response.ok;
+    const data = await response.json(); 
+    return data;
   } catch (error) {
     if (error instanceof CustomError) {
-      throw error; // Re-lanzamos el CustomError si es el tipo esperado
+      throw error;
     }
     console.error("Error al verificar sesión:", error);
-    throw new CustomError("Error desconocido al verificar sesión", "UNKNOWN_ERROR", 500);  // Error genérico
+    throw new CustomError(
+      "Error desconocido al verificar sesión",
+      "UNKNOWN_ERROR",
+      500
+    ); 
   }
 };
 
@@ -38,7 +50,11 @@ export const loginService = async (data: LoginData): Promise<void> => {
       throw error; // Lanzamos el CustomError para que se maneje correctamente
     }
     console.error("Error en login:", error);
-    throw new CustomError("Error desconocido en el login", "UNKNOWN_ERROR", 500);  // Error genérico
+    throw new CustomError(
+      "Error desconocido en el login",
+      "UNKNOWN_ERROR",
+      500
+    ); // Error genérico
   }
 };
 
@@ -57,6 +73,10 @@ export const logoutService = async (): Promise<void> => {
       throw error; // Lanzamos el CustomError para que se maneje correctamente
     }
     console.error("Error en logout:", error);
-    throw new CustomError("Error desconocido al cerrar sesión", "UNKNOWN_ERROR", 500);  // Error genérico
+    throw new CustomError(
+      "Error desconocido al cerrar sesión",
+      "UNKNOWN_ERROR",
+      500
+    ); // Error genérico
   }
 };
