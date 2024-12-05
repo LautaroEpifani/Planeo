@@ -1,7 +1,16 @@
-
+import styles from "./SecondaryNavbar.module.css";
 const SecondaryNavbar = () => {
   return (
-    <div>SecondaryNavbar</div>
+    <div className={styles.container}>
+      <div className={styles.logoWrapper}>
+      <button className={styles.button} >
+          Title
+        </button>
+      </div>
+      <button className={styles.button} >
+          Add +
+        </button>
+    </div>
   )
 }
 

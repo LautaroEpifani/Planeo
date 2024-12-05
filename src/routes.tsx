@@ -2,7 +2,7 @@ import { RouteObject } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home/Home";
 import Board from "./pages/Board/Board";
-import PrivateRoute from "./components/PrivateRoute";
+// import PrivateRoute from "./components/PrivateRoute";
 
 const routes: RouteObject[] = [
   {
@@ -16,9 +16,9 @@ const routes: RouteObject[] = [
       {
         path: "board",
         element: (
-          <PrivateRoute>
+          // <PrivateRoute>
             <Board />
-          </PrivateRoute>
+          // </PrivateRoute>
         ),
       },
     ],

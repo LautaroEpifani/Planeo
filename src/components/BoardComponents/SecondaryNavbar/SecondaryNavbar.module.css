@@ -1,0 +1,21 @@
+
+
+.container {
+    background-color: #1da5e4;
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .button {
+    background-color: #FFFFFF;
+    font: bold;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}

@@ -1,14 +1,14 @@
-@import '../../../css/variables.css';
+
 
 .container {
-    background-color: var(--primary-color);
+    background-color: #1d77e4;
     height: 8vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   
   .logoWrapper {  

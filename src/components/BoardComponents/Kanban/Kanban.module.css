@@ -1,0 +1,74 @@
+/* Kanban.module.css */
+.kanbanBoard {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    height: 94vh;
+  }
+  
+  .column {
+    width: 30%;
+    background-color: #ffffff; /* Fondo de las columnas */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .taskList {
+    flex-grow: 1;
+    padding-top: 10px;
+  }
+  
+  .task {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .task:hover {
+    background-color: #eaeaea;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .task:active {
+    transform: scale(0.98);
+  }
+  
+  .column .task-list .task:last-child {
+    margin-bottom: 0;
+  }
+  
+  .column .task-list {
+    max-height: calc(100vh - 150px); /* Espacio disponible para las tareas */
+    overflow-y: auto;
+    padding-right: 5px; /* Espacio para que las tarjetas no toquen el borde */
+  }
+  
+  .column .task-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .column .task-list::-webkit-scrollbar-thumb {
+    background-color: #1d8ee4;
+    border-radius: 10px;
+  }
+  
+  .column .task-list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
