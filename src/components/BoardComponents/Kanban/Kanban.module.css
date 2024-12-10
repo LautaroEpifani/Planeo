@@ -100,6 +100,7 @@ span:hover {
   padding-right: 10px;
   margin-bottom: 12px;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .addCard:hover {
@@ -114,4 +115,61 @@ span:hover {
 .addCard h3 {
   margin: 0;
   font-size: 14px;
+}
+
+
+.newCard {
+  background-color: #ffffff;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 -2px 4px rgba(0, 0, 0, 0.1),
+    -2px 2px 4px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+input {
+  display: block;
+  outline: none;
+}
+
+.newCardButtons {
+  display: flex;
+  gap: 4px;
+}
+
+.saveBtn {
+  background-color: #0085d7;
+  color: white;
+  border: none;
+  padding: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.saveBtn:hover {
+  background-color: #006fa6;
+}
+
+.cancelBtn {
+  color: #3e3e3e;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.cancelBtn:hover {
+  background-color: rgba(169, 169, 169, 0.45);
 }

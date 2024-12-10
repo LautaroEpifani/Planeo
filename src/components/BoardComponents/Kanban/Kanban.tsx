@@ -3,9 +3,11 @@ import styles from "./Kanban.module.css";
 import { CiEdit } from "react-icons/ci";
 import { AiOutlineDelete } from "react-icons/ai";
 import { useCards } from "../../../hooks/useCards";
+import { ImCancelCircle } from "react-icons/im";
+import { NewCard } from "../../../types/types";
 
 const Kanban: React.FC = () => {
-  const { cards, deleteCard, updateCards } = useCards();
+  const { cards, createCard, deleteCard, updateCards } = useCards();
 
   const columns: ("todo" | "in-progress" | "done")[] = [
     "todo",
@@ -100,6 +102,31 @@ const Kanban: React.FC = () => {
     }
   };
 
+  const initialNewCard = {
+    cardName: "",
+    description: "",
+    createdBy: "",
+    assignedTo: "",
+    status: "todo",
+  };
+
+  const [newCard, setNewCard] = useState<NewCard | null>(null);
+
+  const handleAddCard = (status: "todo" | "in-progress" | "done") => {
+    setNewCard({ ...initialNewCard, status });
+  };
+
+  const handleSaveNewCard =  () => {
+    if (!newCard) return;
+    try {
+      console.log(newCard);
+      createCard(newCard);
+      setNewCard(null); // Limpiar el estado después de guardar
+    } catch (error) {
+      console.error("Error saving the card:", error);
+    }
+  };
+
   return (
     <div className={styles.kanbanBoard}>
       {columns.map((column) => (
@@ -150,10 +177,47 @@ const Kanban: React.FC = () => {
                 </div>
               ))}
           </div>
-          <div className={styles.addCard}>
-            <span>+</span>
-            <h3>Add one card</h3>
-          </div>
+          {newCard && newCard.status === column ? (
+            <>
+              <div className={styles.newCard}>
+                <input
+                  className={styles.title}
+                  placeholder="Card name"
+                  value={newCard.cardName}
+                  onChange={(e) =>
+                    setNewCard({ ...newCard, cardName: e.target.value })
+                  }
+                />
+                <input
+                  className={styles.description}
+                  placeholder="Description"
+                  value={newCard.description}
+                  onChange={(e) =>
+                    setNewCard({ ...newCard, description: e.target.value })
+                  }
+                />
+              </div>
+              <div className={styles.newCardButtons}>
+                <button onClick={handleSaveNewCard} className={styles.saveBtn}>
+                  Save
+                </button>
+                <button
+                  onClick={() => setNewCard(null)}
+                  className={styles.cancelBtn}
+                >
+                  <ImCancelCircle />
+                </button>
+              </div>
+            </>
+          ) : (
+            <div
+              className={styles.addCard}
+              onClick={() => handleAddCard(column)}
+            >
+              <span>+</span>
+              <h3>Add one card</h3>
+            </div>
+          )}
         </div>
       ))}
     </div>

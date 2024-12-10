@@ -11,6 +11,7 @@ export type InputsRegister = {
   type: string;
 };
 
+export type CardStatus = "todo" | "in-progress" | "done";
 
 export type Card = {
   id: number;
@@ -18,7 +19,9 @@ export type Card = {
   description: string;
   createdBy: string;
   assignedTo: string;
-  status: 'todo' | 'in-progress' | 'done';
+  status: CardStatus;
   createdAt: string;
   updatedAt: string;
-}
+};
+
+export type NewCard = Omit<Card, "id" | "createdAt" | "updatedAt">;

@@ -6,12 +6,10 @@ import { getCardsService, createCardService, updateCardService, deleteCardServic
 const CardsProvider = ({ children }: { children: ReactNode }) => {
   const [cards, setCards] = useState<Card[]>([]);
 
-  console.log(cards)
-
   // Obtener todas las tarjetas al montar el componente
   useEffect(() => {
     getAllCards();
-  }, []);
+  }, [cards]);
 
   const updateCards = (updatedCards: Card[]) => {
     setCards(updatedCards);
