@@ -32,11 +32,6 @@
   color: #333;
 }
 
-.taskList {
-  flex-grow: 1;
-  padding-top: 10px;
-}
-
 .task {
   display: flex;
   justify-content: space-between;
@@ -45,11 +40,12 @@
   padding: 4px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 12px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 -2px 4px rgba(0, 0, 0, 0.1),
     -2px 2px 4px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
   cursor: grab;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .taskBefore {
@@ -94,25 +90,28 @@ span:hover {
   transform: scale(1.2);
 }
 
-.column .task-list .task:last-child {
-  margin-bottom: 0;
+.addCard {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #535353;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
 }
 
-.column .task-list {
-  max-height: calc(100vh - 150px); /* Espacio disponible para las tareas */
-  overflow-y: auto;
-  padding-right: 5px; /* Espacio para que las tarjetas no toquen el borde */
+.addCard:hover {
+  background-color: rgba(169, 169, 169, 0.45);
 }
 
-.column .task-list::-webkit-scrollbar {
-  width: 6px;
+.addCard span {
+  margin-right: 8px;
+  font-size: 20px;
 }
 
-.column .task-list::-webkit-scrollbar-thumb {
-  background-color: #1d8ee4;
-  border-radius: 10px;
-}
-
-.column .task-list::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.1);
+.addCard h3 {
+  margin: 0;
+  font-size: 14px;
 }

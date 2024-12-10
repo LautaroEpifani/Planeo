@@ -150,6 +150,10 @@ const Kanban: React.FC = () => {
                 </div>
               ))}
           </div>
+          <div className={styles.addCard}>
+            <span>+</span>
+            <h3>Add one card</h3>
+          </div>
         </div>
       ))}
     </div>
