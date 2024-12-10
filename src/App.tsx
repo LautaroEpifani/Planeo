@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import routes from "./routes";
-import AuthProvider from "./context/AuthProvider";
+import AuthProvider from "./context/auth/AuthProvider";
+import CardsProvider from "./context/cards/CardsProvider";
 
 function App() {
   const router = createBrowserRouter(routes, {
@@ -16,7 +17,9 @@ function App() {
 
   return (
     <AuthProvider>
-      <RouterProvider router={router} future={{ v7_startTransition: true }} />
+      <CardsProvider>
+        <RouterProvider router={router} future={{ v7_startTransition: true }} />
+      </CardsProvider>
     </AuthProvider>
   );
 }

@@ -10,3 +10,15 @@ export type InputsRegister = {
   placeholder: string;
   type: string;
 };
+
+
+export type Card = {
+  id: number;
+  cardName: string;
+  description: string;
+  createdBy: string;
+  assignedTo: string;
+  status: 'todo' | 'in-progress' | 'done';
+  createdAt: string;
+  updatedAt: string;
+}

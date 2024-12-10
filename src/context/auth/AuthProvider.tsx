@@ -1,10 +1,10 @@
 import { useState, ReactNode, useEffect } from "react";
-import { LoginData } from "../types/types";
+import { LoginData } from "../../types/types";
 import {
   checkSession,
   loginService,
   logoutService,
-} from "../services/authService";
+} from "../../services/authService";
 import AuthContext from "./AuthContext";
 
 

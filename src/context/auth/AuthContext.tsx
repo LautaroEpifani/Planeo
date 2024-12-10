@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { LoginData } from "../types/types";
+import { LoginData } from "../../types/types";
 interface AuthContextType {
   isAuthenticated: boolean | null;
   login: (data: LoginData) => Promise<void>;

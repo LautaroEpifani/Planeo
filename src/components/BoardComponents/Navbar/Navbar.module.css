@@ -1,33 +1,49 @@
-
-
 .container {
-    background-color: #1d77e4;
-    height: 8vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  
-  .logoWrapper {  
-    display: flex; 
-    align-items: center; 
-  }
-  
-  .logo {
-    width: auto;
-    height: 10vh;
-    border-radius: 10px; 
-    object-fit: cover; 
-  }
+  background-color: #003576;
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 110px;
+  /* el margin-right auto de buttonCreate le da 120px */
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow: hidden;
+}
 
-  .button {
-    background-color: #FFFFFF;
-    font: bold;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 5px;
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #dfdfdf;
+  font-size: 2rem;
+}
+
+.title {
+  font-size: 1rem;
+  color: #dfdfdf;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: rgba(237, 53, 120, 0.65);
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.buttonCreate {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 3px;
 }

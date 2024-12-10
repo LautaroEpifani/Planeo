@@ -1,20 +1,22 @@
-import styles from './Sidebar.module.css';
+import styles from "./Sidebar.module.css";
 
 const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.section}>
-        <h2>Tableros</h2>
+        <h2>Boards</h2>
         <ul>
-          <li>Miembros</li>
-          <li>Ajustes</li>
+          <li>Members</li>
+          <li>Settings</li>
         </ul>
       </div>
-      
+
       <div className={styles.section}>
-        <h2>Mis Tableros</h2>
-        <div className={styles.tablero}>
-          <p>Tablero: <strong>Mi Tablero</strong></p>
+        <h2>My Boards</h2>
+        <div className={styles.board}>
+          <p>
+            <strong>React Goats</strong>
+          </p>
         </div>
       </div>
     </div>
