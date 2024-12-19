@@ -1,0 +1,98 @@
+.container {
+  background-image: linear-gradient(
+    220deg,
+    rgb(110, 22, 182) 0%,
+    hsl(265deg 66% 44%) 6%,
+    hsl(257deg 55% 48%) 12%,
+    hsl(249deg 50% 52%) 18%,
+    hsl(241deg 49% 57%) 24%,
+    hsl(235deg 50% 59%) 29%,
+    hsl(230deg 52% 59%) 35%,
+    hsl(224deg 54% 60%) 41%,
+    hsl(219deg 56% 61%) 47%,
+    hsl(213deg 57% 62%) 53%,
+    hsl(207, 58%, 63%) 59%,
+    hsl(201deg 59% 65%) 65%,
+    hsl(195deg 60% 67%) 71%,
+    hsl(190deg 61% 68%) 76%,
+    hsl(185deg 63% 70%) 82%,
+    hsl(180deg 65% 72%) 88%,
+    hsl(176deg 67% 74%) 94%,
+    hsl(171deg 69% 76%) 100%
+  );
+  width: 100%;
+}
+
+.buttonCreate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgb(17 24 39);
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+
+/* Modal overlay (fondo oscuro) */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que el modal esté encima de todo */
+}
+
+/* Modal container (formulario) */
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin-bottom: 15px;
+
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #003576;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modal button:hover {
+  background-color: #002451;
+}
+
+.modal button:last-child {
+  background-color: #dc3545;
+}
+
+.modal button:last-child:hover {
+  background-color: #c82333;
+}
+

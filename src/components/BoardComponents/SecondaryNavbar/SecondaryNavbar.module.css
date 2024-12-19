@@ -1,0 +1,29 @@
+.container {
+  background-color: rgb(17 24 39);
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.h1 {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #ffffff;
+  font: bold;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+}

@@ -1,0 +1,215 @@
+/* Kanban.module.css */
+.kanbanBoard {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  height: 92vh;
+  background-image: linear-gradient(
+    220deg,
+    rgb(110, 22, 182) 0%,
+    hsl(265deg 66% 44%) 6%,
+    hsl(257deg 55% 48%) 12%,
+    hsl(249deg 50% 52%) 18%,
+    hsl(241deg 49% 57%) 24%,
+    hsl(235deg 50% 59%) 29%,
+    hsl(230deg 52% 59%) 35%,
+    hsl(224deg 54% 60%) 41%,
+    hsl(219deg 56% 61%) 47%,
+    hsl(213deg 57% 62%) 53%,
+    hsl(207, 58%, 63%) 59%,
+    hsl(201deg 59% 65%) 65%,
+    hsl(195deg 60% 67%) 71%,
+    hsl(190deg 61% 68%) 76%,
+    hsl(185deg 63% 70%) 82%,
+    hsl(180deg 65% 72%) 88%,
+    hsl(176deg 67% 74%) 94%,
+    hsl(171deg 69% 76%) 100%
+  );
+}
+
+.column {
+  width: 30%;
+  background-color: #ffffff; /* Fondo de las columnas */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.column h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.task {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 -2px 4px rgba(0, 0, 0, 0.1),
+    -2px 2px 4px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+
+.borderContainer {
+  position: relative;
+}
+
+.taskBefore {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  border-top: 2px solid rgba(0, 170, 255, 0.8); 
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.taskAfter {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+  border-bottom: 2px solid rgba(0, 170, 255, 0.8);
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transparentBorder {
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+.visibleBorder {
+  opacity: 1; 
+  transition: opacity 0.3s ease; 
+}
+
+.task:hover {
+  outline: 2px solid #00aaff;
+}
+
+.task:active {
+  transform: scale(0.98);
+}
+
+.title {
+  font-size: 0.8rem;
+}
+
+.description {
+  font-size: 0.6rem;
+}
+
+.icons {
+  display: flex;
+  gap: 5px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.addCard {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #535353;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.addCard:hover {
+  background-color: rgba(169, 169, 169, 0.45);
+}
+
+.addCard span {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.addCard h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+.newCard {
+  background-color: #ffffff;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 -2px 4px rgba(0, 0, 0, 0.1),
+    -2px 2px 4px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+input {
+  display: block;
+  outline: none;
+}
+
+.newCardButtons {
+  display: flex;
+  gap: 4px;
+}
+
+.saveBtn {
+  background-color: #0085d7;
+  color: white;
+  border: none;
+  padding: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.saveBtn:hover {
+  background-color: #006fa6;
+}
+
+.cancelBtn {
+  color: #3e3e3e;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.cancelBtn:hover {
+  background-color: rgba(169, 169, 169, 0.45);
+}
+

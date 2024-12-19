@@ -1,0 +1,172 @@
+@import 'aos/dist/aos.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+:root {
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.55),
+    1px 1.9px 2.4px -0.8px hsl(var(--shadow-color) / 0.55),
+    2.5px 5.1px 6.4px -1.7px hsl(var(--shadow-color) / 0.55),
+    6.3px 12.5px 15.7px -2.5px hsl(var(--shadow-color) / 0.55);
+  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.51),
+    2.1px 4.1px 5.2px -0.4px hsl(var(--shadow-color) / 0.51),
+    4px 7.9px 10px -0.7px hsl(var(--shadow-color) / 0.51),
+    6.6px 13.2px 16.6px -1.1px hsl(var(--shadow-color) / 0.51),
+    10.6px 21.2px 26.7px -1.4px hsl(var(--shadow-color) / 0.51),
+    16.7px 33.4px 42px -1.8px hsl(var(--shadow-color) / 0.51),
+    25.4px 50.8px 63.9px -2.1px hsl(var(--shadow-color) / 0.51),
+    37.5px 75px 94.3px -2.5px hsl(var(--shadow-color) / 0.51);
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective {
+  perspective: 800px;
+}
+
+.scroll-smooth-breeze_plane-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.scroll-smooth-breeze__plane-path {
+  position: absolute;
+  width: 100%;
+}
+.scroll-smooth-breeze__plane {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.circle-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-text span {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  white-space: nowrap;
+  animation: spin-circle 6s linear infinite;
+}
+
+@keyframes spin-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circle-svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+}
+
+.animate-spin-circle {
+  animation: spin-circle 6s linear infinite;
+}
+
+.circle-text-path {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  fill: black;
+  letter-spacing: 2px;
+}
+
+@keyframes spin-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.logo-rotate {
+  animation: spin 5s linear infinite; /* Animación continua */
+}
+
+.logo-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.logo-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo-wrapper {
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-wrapper:hover {
+  transform: scale(var(--hover-scale, 1.2));
+}
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-fast {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
