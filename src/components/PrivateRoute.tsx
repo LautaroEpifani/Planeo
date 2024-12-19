@@ -10,7 +10,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
   const { userLogged } = useAuth();
 
   if (userLogged === null) {
-    return <div>Loading...</div>;
+    <Navigate to="/"/>;
   }
 
   return userLogged ? children : <Navigate to="/" />;
