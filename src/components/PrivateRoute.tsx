@@ -11,13 +11,14 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (userLogged === null) {
+      setLoading(true);
+    } else {
       setLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
+    }
   }, [userLogged]);
   if (loading) {
-    <Navigate to="/" />;
+    return <div>Checking authentication...</div>;
   }
   return userLogged ? children : <Navigate to="/" />;
 };
