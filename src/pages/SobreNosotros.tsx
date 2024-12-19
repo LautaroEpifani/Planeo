@@ -83,7 +83,7 @@ function SobreNosotros() {
             subtitle="Frontend"
             content="¡Hola! Soy Roger y siempre he tenido una mentalidad enfocada en resolver problemas. Durante mis dos años de experiencia como desarrollador, me he especializado en el backend. Aunque es mi zona de confort, también disfruto comprendiendo cómo encajan todas las piezas del sistema. Esto me permite colaborar de manera fluida con compañeros de frontend y otras áreas, facilitando una mejor integración del proyecto.
                       Últimamente, he descubierto que mis habilidades de comunicación y mi enfoque resolutivo pueden aportar aún más en roles de liderazgo. Estoy entusiasmado por asumir nuevos desafíos donde pueda combinar estas habilidades para guiar equipos y proyectos hacia el éxito."
-            buttonText={<a href="https://www.linkedin.com/" >LinkedIn</a>}
+            buttonText={<a href="https://www.linkedin.com/in/roger-duno/" >LinkedIn</a>}
             backgroundColor="bg-green-300"
             hoverEffect
           />
@@ -91,7 +91,7 @@ function SobreNosotros() {
             title="Lautaro"
             subtitle="Full Stack Developer"
             content="Soy un Full Stack Developer especializado en JavaScript con experiencia en React, Node.js y TypeScript. Apasionado por escribir código limpio, legible y escalable, siempre busco implementar soluciones que sean mantenibles a largo plazo. Creo firmemente en la importancia de los tests, por lo que aplico herramientas como Jest y Cypress para garantizar la calidad del software. Me motiva trabajar en proyectos desafiantes que requieren creatividad y eficiencia. Además, disfruto colaborar con equipos ágiles, priorizando la comunicación efectiva y las buenas prácticas de desarrollo. Siempre estoy aprendiendo nuevas tecnologías para seguir creciendo profesionalmente."
-            buttonText={<a href="https://www.linkedin.com/" >LinkedIn</a>}
+            buttonText={<a href="https://www.linkedin.com/in/LautaroEpifani/" >LinkedIn</a>}
             backgroundColor="bg-blue-300"
             hoverEffect
           />
