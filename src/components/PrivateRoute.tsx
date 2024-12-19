@@ -9,17 +9,28 @@ interface PrivateRouteProps {
 const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
   const { userLogged } = useAuth();
   const [loading, setLoading] = useState(true);
+  const [redirecting, setRedirecting] = useState(false);
 
   useEffect(() => {
     if (userLogged === null) {
       setLoading(true);
+      const timer = setTimeout(() => {
+        setRedirecting(true);
+      }, 1000); 
+      return () => clearTimeout(timer);
     } else {
-      setLoading(false);
+      setLoading(false); 
     }
   }, [userLogged]);
-  if (loading) {
-    return <div>Checking authentication...</div>;
+
+  if (redirecting) {
+    return <Navigate to="/" />;
   }
+
+  if (loading) {
+    return <div>Checking authentication...</div>; 
+  }
+
   return userLogged ? children : <Navigate to="/" />;
 };
 
