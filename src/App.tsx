@@ -9,11 +9,10 @@ import AuthProvider from './context/auth/AuthProvider';
 import CardsProvider from './context/cards/CardsProvider';
 import SobreNosotros from './pages/SobreNosotros';
 import Contact from './pages/Contact';
+import PrivateRoute from './components/PrivateRoute';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useLayoutEffect } from 'react';
-import PrivateRoute from 'components/PrivateRoute';
-
 
 function App() {
   useEffect(() => {
