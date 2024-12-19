@@ -9,10 +9,10 @@ import AuthProvider from './context/auth/AuthProvider';
 import CardsProvider from './context/cards/CardsProvider';
 import SobreNosotros from './pages/SobreNosotros';
 import Contact from './pages/Contact';
-// import PrivateRoute from "./components/PrivateRoute";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useLayoutEffect } from 'react';
+import PrivateRoute from 'components/PrivateRoute';
 
 
 function App() {
@@ -40,9 +40,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/sobre-nosotros" element={<SobreNosotros />} />
             <Route path="/Contact" element={<Contact />} />
-            {/* <PrivateRoute> */}
-            <Route path="/board" element={<Board />} />
-            {/* </PrivateRoute> */}
+            <Route path="/board" element={<PrivateRoute><Board /></PrivateRoute>} />
             <Route path="*" element={<Error404Page />} />
           </Routes>
         </CardsProvider>
